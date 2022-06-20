@@ -1,0 +1,2 @@
+name: RVEXT
+desc: External buildroot tree for testing RV Extension information in vDSO.

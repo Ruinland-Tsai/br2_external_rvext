@@ -1,0 +1,7 @@
+config BR2_PACKAGE_RV_EXT_PROGRAMS
+	bool "Test programs for checking RISC-V extension information in vdso data."
+	help
+	  3 programs are provided for checking RISC-V extensions:
+	  hwcap_traverse : Traverse the information pointed by HWCAP2 directly.
+	  rv_check_ext_vdso : Check specific extensions via vDSO function call.
+	  rv_check_ext_syscall : Check specific extensions via system call.

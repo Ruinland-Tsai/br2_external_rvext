@@ -1,0 +1,14 @@
+TESTPROGRAMS_VERSION:= 1.0
+TESTPROGRAMS_SITE:= $(BR2_EXTERNAL_RVEXT_PATH)/package/testprograms/
+TESTPROGRAMS_SITE_METHOD:=local
+TESTPROGRAMS_INSTALL_TARGET:=YES
+
+define TESTPROGRAMS_BUILD_CMDS
+        $(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D) all
+endef
+
+define TESTPROGRAMS_INSTALL_TARGET_CMDS
+        $(MAKE) INSTALL="$(INSTALL)" DESTDIR="$(TARGET_DIR)"  -C $(@D) install
+endef
+
+$(eval $(generic-package))
